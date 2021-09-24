@@ -78,11 +78,11 @@ void loop() {
   }
 
   // Set to zero if button pressed
-	int currentButtonState = !digitalRead(PIN_ROT_RESET);
-	if (currentButtonState != lastButtonState)
-	{
+  int currentButtonState = !digitalRead(PIN_ROT_RESET);
+  if (currentButtonState != lastButtonState)
+  {
     lastButtonState = currentButtonState;
     rotary.write(0);
-	}
+  }
 }
 
