@@ -9,7 +9,6 @@
 
 #define PIN_TRIM_SERVO 16
 
-
 Servo indicator;
 int indicatorPosition = 90;
 
@@ -49,7 +48,6 @@ void setup() {
 
   Joystick.begin();
   Joystick.setXAxisRange(TRIM_MIN, TRIM_MAX);
-  // Joystick.setRxAxisRange(TRIM_MIN, TRIM_MAX);
 }
 
 void loop() {
@@ -80,7 +78,7 @@ void loop() {
   }
 
   // Set to zero if button pressed
-	int currentButtonState = !digitalRead(pinToButtonMap);
+	int currentButtonState = !digitalRead(PIN_ROT_RESET);
 	if (currentButtonState != lastButtonState)
 	{
     lastButtonState = currentButtonState;
